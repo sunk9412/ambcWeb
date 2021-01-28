@@ -6,7 +6,7 @@ $(document).ready(function () {
         i18n.init({ 
             lng: a,
             // resStore: resources,
-            resGetPath: "/auc/languages/__lng__/__ns__.min.json",
+            resGetPath: "/ambcWeb/auc/languages/__lng__/__ns__.min.json",
             fallbackLng: "en" 
         },
             function (a) {
