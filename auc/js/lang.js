@@ -14,11 +14,8 @@ $(document).ready(function () {
         }),
         $(".lang").click(function () {
             var a = $(this).attr("data-lang");
-            localStorage.setItem("language", a),
-                i18n.init({
-                    lng: a,
-                    resGetPath: "/ambcWeb/auc/languages/__lng__/__ns__.min.json"
-                }, function (a) {
+            null != localStorage.getItem("language", a) && (a = localStorage.getItem("language", a)),
+                i18n.init({ lng: a }, function (a) {
                     $(document).i18n();
                 });
         });
